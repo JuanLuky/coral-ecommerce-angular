@@ -1,0 +1,83 @@
+@import 'colors';
+
+header {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+  max-width: 1320px;
+  width: 95%;
+
+  section {
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      cursor: pointer;
+    }
+    .buscar {
+      transition: .2s ease-in;
+
+      &:hover {
+        opacity: 0.8;
+        transform: scale(1.08);
+      }
+    }
+    .header-rigth {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .account {
+        margin-bottom: -3px;
+        transition: .2s ease-in;
+
+        &:hover {
+          opacity: 0.8;
+          transform: scale(1.08);
+        }
+      }
+      .shop {
+        transition: .2s ease-in;
+
+        &:hover {
+          opacity: 0.8;
+          transform: scale(1.08);
+        }
+      }
+    }
+  }
+
+  nav {
+    margin: auto;
+    margin-top: 20px;
+    width: 100%;
+    ul {
+      font-weight: 400;
+      gap: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        cursor: pointer;
+        transition: .2s ease-in;
+
+        &:hover {
+          color: $orange-600;
+        }
+      }
+
+    }
+
+    @media (max-width: 768px) {
+      ul {
+        font-weight: 500;
+        font-size: 10px;
+      }
+    }
+  }
+}
