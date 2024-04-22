@@ -1,3 +1,3 @@
 export const environment = {
-  api: 'http://localhost:8080/shop'
+  api: 'https://coral-render-app.onrender.com/shop'
 };
