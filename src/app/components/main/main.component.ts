@@ -1,16 +1,15 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
-import { UseService } from '../../../service/use.service';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [MatIconModule, AsyncPipe],
+  imports: [MatIconModule, AsyncPipe, ProductListComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
-  private userService = inject(UseService);
-  protected product$ = this.userService.getUsers();
+
 }

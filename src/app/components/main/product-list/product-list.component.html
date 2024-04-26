@@ -1,0 +1,40 @@
+<section class="content-products content">
+  <div class="content-list-product">
+    <h1>Or Subscribe to the Newsletter</h1>
+
+    <div class="content-list-filter">
+      <nav class="list-filter">
+        <ul>
+          <li (click)="filterProducts('All')">All Products</li>
+          <li (click)="filterProducts('Nike')">Nike</li>
+          <li (click)="filterProducts('Adidas')">Adidas</li>
+          <li (click)="filterProducts('Puma')">Puma</li>
+        </ul>
+      </nav>
+      <button class="btn-primary filter">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="filter_list"></mat-icon>
+
+        Filter</button>
+    </div>
+
+    <div class="card-container">
+
+      <div class="card-content" *ngFor="let product of filteredProducts">
+        <div class="card-content-img">
+          <img [src]="product.image" alt="Tenis">
+        </div>
+
+        <div class="card-description">
+          <h3>{{ product.brand }}</h3>
+          <div class="card-footer">
+            <p>Shoe</p>
+            <p class="promotion">{{ product.price }}</p>
+          </div>
+          <button class="btn-primary ">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="shopping_cart"></mat-icon>
+            Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

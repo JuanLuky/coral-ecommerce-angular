@@ -14,47 +14,6 @@
     </div>
   </section>
 
-  <section class="content-products content">
-    <div class="content-list-product">
-      <h1>Or Subscribe to the Newsletter</h1>
+  <product-list></product-list>
 
-      <div class="content-list-filter">
-        <nav class="list-filter">
-          <ul>
-            <li>All Products</li>
-            <li>T-Shirt</li>
-            <li>Hoodies</li>
-            <li>Jacket</li>
-          </ul>
-        </nav>
-        <button class="btn-primary filter">
-          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="filter_list"></mat-icon>
-
-          Filter</button>
-      </div>
-
-      <div class="card-container">
-
-        @for (product of product$ | async; track product.id) {
-        <div class="card-content">
-          <div class="card-content-img">
-            <img [src]="product.image" alt="Tenis Nike">
-          </div>
-
-          <div class="card-description">
-            <h3>{{ product.title }}</h3>
-            <div class="card-footer">
-              <p>Shoe</p>
-              <p class="promotion">{{ product.price }}</p>
-            </div>
-            <button class="btn-primary ">
-              <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="shopping_cart"></mat-icon>
-              Add to Cart</button>
-          </div>
-        </div>
-      }
-
-      </div>
-    </div>
-  </section>
 </main>
