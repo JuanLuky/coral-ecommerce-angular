@@ -27,7 +27,6 @@ export class ProductListComponent {
         this.filteredProducts = this.allProducts;
       } else {
         this.filteredProducts = this.allProducts.filter(product => product.brand === brand); // Filtramos os produtos pela marca selecionada
-        console.log("Oiii2")
       }
     }
 }
