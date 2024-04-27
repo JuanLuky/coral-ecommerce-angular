@@ -4,6 +4,7 @@
   margin-top: 90px;
   width: 100%;
   flex-wrap: wrap;
+  margin-bottom: 90px;
 
 
   .content-list-product {
@@ -64,6 +65,9 @@
       transition: .1s ease-in;
       &:hover {
         transform: scale(1.01);
+      }
+      @media screen and (max-width: 640px) {
+        width: 70%;
       }
 
       .card-content-img {

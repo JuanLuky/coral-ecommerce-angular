@@ -3,14 +3,16 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
+import { ProductHighlightComponent } from './components/main/product-highlight/product-highlight.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, MainComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, MainComponent,ProductHighlightComponent],
   template: `
     <app-header></app-header>
     <app-main></app-main>
+    <app-product-highlight></app-product-highlight>
     <app-footer></app-footer>
     <router-outlet />
   `,
