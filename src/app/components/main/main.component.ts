@@ -1,15 +1,17 @@
 import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
-import {MatIconModule} from '@angular/material/icon';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductHighlightComponent } from './product-highlight/product-highlight.component';
+import { ProductCollectionsComponent } from './product-collections/product-collections.component';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [MatIconModule, AsyncPipe, ProductListComponent],
+  imports: [
+    ProductListComponent,
+    ProductHighlightComponent,
+    ProductCollectionsComponent,
+  ],
   templateUrl: './main.component.html',
-  styleUrl: './main.component.scss'
 })
-export class MainComponent {
-
-}
+export class MainComponent {}

@@ -10,7 +10,7 @@ export class UseService {
   private http = inject(HttpClient);
   private URL_API = `${environment.api}`
 
-  getUsers() {
+  getProducts() {
     return this.http.get<Product[]>(this.URL_API)
   }
 }

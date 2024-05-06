@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { UseService } from '../../../../service/use.service';
 import { MatIconModule } from '@angular/material/icon';
 import { AsyncPipe, CommonModule } from '@angular/common';
+import { Product } from '../../../../service/product.model';
 
 @Component({
   selector: 'product-list',
@@ -16,8 +17,8 @@ export class ProductListComponent {
 
   private userService = inject(UseService);
   protected product$ = this.userService
-    .getUsers()
-    .subscribe((products: any[]) => {
+    .getProducts()
+    .subscribe((products: Product[]) => {
       this.allProducts = products;
       this.filteredProducts = products; // Começamos exibindo todos os produtos
     });

@@ -12,7 +12,6 @@ import { ProductHighlightComponent } from './components/main/product-highlight/p
   template: `
     <app-header></app-header>
     <app-main></app-main>
-    <app-product-highlight></app-product-highlight>
     <app-footer></app-footer>
     <router-outlet />
   `,

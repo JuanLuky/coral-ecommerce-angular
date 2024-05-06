@@ -2,7 +2,6 @@
 
 .content-products {
   margin-top: 90px;
-  width: 100%;
   flex-wrap: wrap;
   margin-bottom: 90px;
 
@@ -32,6 +31,10 @@
         display: flex;
         align-items: center;
         gap: 50px;
+
+        @media screen and (max-width: 640px) {
+          gap: 30px;
+        }
 
         li {
           font-size: 14px;

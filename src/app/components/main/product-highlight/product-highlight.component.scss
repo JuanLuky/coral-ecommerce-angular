@@ -11,6 +11,13 @@
   height: 770px;
   padding: 0 300px 0 0;
 
+@media screen and (max-width: 1600px) {
+  background:
+  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url("../../../../assets/images/background.jpg");
+}
+
+
   .content-img-featured {
      width: max-content;
      height: 100%;
