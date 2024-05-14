@@ -10,9 +10,6 @@ import { ProductHighlightComponent } from './components/main/product-highlight/p
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, FooterComponent, MainComponent,ProductHighlightComponent],
   template: `
-    <app-header></app-header>
-    <app-main></app-main>
-    <app-footer></app-footer>
     <router-outlet />
   `,
 })

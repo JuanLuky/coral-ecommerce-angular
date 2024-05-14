@@ -15,6 +15,7 @@ export class ProductListComponent {
   allProducts!: any[]; // Array para armazenar todos os produtos
   filteredProducts!: any[];
 
+
   private userService = inject(UseService);
   protected product$ = this.userService
     .getProducts()
@@ -30,4 +31,11 @@ export class ProductListComponent {
         this.filteredProducts = this.allProducts.filter(product => product.brand === brand); // Filtramos os produtos pela marca selecionada
       }
     }
+
+    addToCart(product: Product) {
+      // Implemente a lógica para adicionar o produto ao carrinho
+      this.userService.updateSelectedProduct(product);
+    }
+
+
 }

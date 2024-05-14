@@ -1,0 +1,11 @@
+<ul>
+  <h2>Carrinho de Compras</h2>
+  <li *ngFor="let product of cartItems">
+      @if (product) {
+      <li>
+        <img [src]="product.image" alt="Produto" />
+        <h2>{{ product.title }}</h2>
+        <p>{{ product.price }}</p>
+      </li>
+    }
+</ul>

@@ -19,22 +19,24 @@
 
     <div class="card-container">
 
-      <div class="card-content" *ngFor="let product of filteredProducts">
-        <div class="card-content-img">
-          <img [src]="product.image" alt="Tenis">
-        </div>
-
-        <div class="card-description">
-          <h3>{{ product.title }}</h3>
-          <div class="card-footer">
-            <p>Shoe</p>
-            <p class="promotion">{{ product.price }}</p>
+      @for (product of filteredProducts; track product.id) {
+        <div class="card-content">
+          <div class="card-content-img">
+            <img [src]="product.image" alt="Tenis">
           </div>
-          <button class="btn-primary ">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="shopping_cart"></mat-icon>
-            Add to Cart</button>
+
+          <div class="card-description">
+            <h3>{{ product.title }}</h3>
+            <div class="card-footer">
+              <p>Shoe</p>
+              <p class="promotion">{{ product.price }}</p>
+            </div>
+            <button class="btn-primary" (click)="addToCart(product)">
+              <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="shopping_cart"></mat-icon>
+              Add to Cart</button>
+          </div>
         </div>
-      </div>
+      }
     </div>
   </div>
 </section>
