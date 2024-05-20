@@ -1,22 +1,26 @@
 <main>
-  <section>
-    <img src="/assets/images/logo.svg" alt="logo">
-    <h2></h2>
+  <section class="forms-sections">
+    <img src="/assets/images/logo.svg" alt="logo" />
+    <h2>{{ title }}</h2>
 
-    <button (click)="login()">Login Now </button>
+    <div class="btn-wrapper">
+      <button class="btn-login" (click)="login()">{{ primaryBtnText }}</button>
 
-    <div>
-      <span>or</span>
+      <div class="divider">
+        <div></div>
+        <span>or</span>
+        <div></div>
+      </div>
+
+      <button class="btn-signup">{{ secundaryBtnText }}</button>
     </div>
-
-    <button >Register Now </button>
-
   </section>
 
-  <section>
-    <img src="/assets/images/login-image.png" >
+  <section class="main-sections">
+    <img src="/assets/images/nike-background.png" />
   </section>
 </main>
 
 <div *ngIf="loading" class="spinner-container">
-  <div class="spinner"></div> </div>
+  <div class="spinner"></div>
+</div>

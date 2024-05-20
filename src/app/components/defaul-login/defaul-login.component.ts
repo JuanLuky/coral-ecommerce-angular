@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { AuthGuard } from '../../../service/auth.guard';
-import { Component, inject } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,6 +11,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './defaul-login.component.scss'
 })
 export class DefaulLoginComponent {
+
+  @Input() title = '';
+  @Input() primaryBtnText = '';
+  @Input() secundaryBtnText = '';
+
   loading: boolean = false;
 
 
