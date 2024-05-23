@@ -1,11 +1,27 @@
 <app-defaul-login
-  title="Login into your account"
-  primaryBtnText="Login Now"
-  secundaryBtnText="Signup Now"
+  title="Faça login em sua conta"
+  primaryBtnText="Entrar"
+  secundaryBtnText="Cadastrar"
 >
+  <form [formGroup]="loginForm">
+    <app-primary-input
+      formControlName="email"
+      inputName="email"
+      type="email"
+      label="Email"
+      placeholder="juan.sam@gmail.com"
+    >
+      <img src="assets/images/email.svg" />
+    </app-primary-input>
 
-<form [formGroup]="loginForm">
-  <input type="text">
-</form>
-
+    <app-primary-input
+      formControlName="password"
+      inputName="password"
+      type="password"
+      label="Senha"
+      placeholder="**********"
+    >
+      <img src="assets/images/passwords.svg" />
+    </app-primary-input>
+  </form>
 </app-defaul-login>
