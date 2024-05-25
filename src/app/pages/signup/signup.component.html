@@ -2,15 +2,24 @@
   <div class="spinner"></div>
 </div>
 <app-defaul-login
-  title="Faça login em sua conta"
-  primaryBtnText="Entrar"
-  secundaryBtnText="Cadastrar"
+  title="Resgistrar sua conta"
+  primaryBtnText="Cadastrar"
+  secundaryBtnText="Entrar"
   (submit)="submitLogin()"
   (navigate)="submitRegister()"
-
-  [desablePrimaryBtn]="!loginForm.valid"
+  [desablePrimaryBtn]="!signupForm.valid"
 >
-  <form [formGroup]="loginForm">
+  <form [formGroup]="signupForm">
+    <app-primary-input
+      formControlName="name"
+      inputName="name"
+      type="text"
+      label="Seu nome"
+      placeholder="Juan Santos"
+    >
+      <img src="assets/images/email.svg" />
+    </app-primary-input>
+
     <app-primary-input
       formControlName="email"
       inputName="email"
@@ -26,12 +35,19 @@
       inputName="password"
       type="password"
       label="Senha"
-      placeholder="**********"
     >
       <img src="assets/images/passwords.svg" />
     </app-primary-input>
 
-    <span>Esqueci minha senha</span>
+    <app-primary-input
+      formControlName="passwordConfirm"
+      inputName="passwordConfirm"
+      type="password"
+      label="Confirmar Senha"
+    >
+      <img src="assets/images/passwords.svg" />
+    </app-primary-input>
+
   </form>
 </app-defaul-login>
 

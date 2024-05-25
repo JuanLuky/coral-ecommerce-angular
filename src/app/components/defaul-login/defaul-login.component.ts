@@ -17,13 +17,13 @@ export class DefaulLoginComponent {
   @Output("submit") onLogin = new EventEmitter();
   @Output("navigate") onRegister = new EventEmitter();
 
+
   private router = inject(Router);
 
   submit() {
     this.onLogin.emit();
   }
   navigate() {
-    this.router.navigate(["/signup"]);
+    this.router.navigate(['/signup']);
   }
-
 }
