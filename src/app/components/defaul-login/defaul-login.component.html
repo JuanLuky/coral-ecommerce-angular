@@ -5,7 +5,14 @@
     <ng-content></ng-content>
 
     <div class="btn-wrapper">
-      <button class="btn-login" (click)="submit()">{{ primaryBtnText }}</button>
+      <button
+        class="btn-login"
+        (click)="submit()"
+        [disabled]="desablePrimaryBtn"
+        >
+
+        {{ primaryBtnText }}
+      </button>
 
       <div class="divider">
         <div></div>

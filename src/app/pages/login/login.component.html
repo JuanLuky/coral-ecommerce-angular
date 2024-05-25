@@ -7,6 +7,7 @@
   secundaryBtnText="Cadastrar"
   (submit)="submitLogin()"
   (navigate)="submitRegister()"
+  [desablePrimaryBtn]="!loginForm.valid"
 >
   <form [formGroup]="loginForm">
     <app-primary-input
