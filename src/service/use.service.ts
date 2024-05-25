@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Product } from './product.model';
+import { Product } from '../app/types/product.model';
 import { environment } from '../environments/environment.development';
 import { BehaviorSubject } from 'rxjs';
 
@@ -18,6 +18,7 @@ export class UseService {
     return this.http.get<Product[]>(this.URL_API)
   }
 
+  // Carrinho de compras
   updateSelectedProduct(product: Product) {
     const currentItems = this.cartItemsSource.getValue();
     this.cartItemsSource.next([...currentItems, product]);

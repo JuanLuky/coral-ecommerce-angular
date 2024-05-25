@@ -1,7 +1,12 @@
+<div *ngIf="loading" class="spinner-container">
+  <div class="spinner"></div>
+</div>
 <app-defaul-login
   title="Faça login em sua conta"
   primaryBtnText="Entrar"
   secundaryBtnText="Cadastrar"
+  (submit)="submitLogin()"
+  (navigate)="submitRegister()"
 >
   <form [formGroup]="loginForm">
     <app-primary-input
@@ -23,5 +28,8 @@
     >
       <img src="assets/images/passwords.svg" />
     </app-primary-input>
+
+    <span>Esqueci minha senha</span>
   </form>
 </app-defaul-login>
+

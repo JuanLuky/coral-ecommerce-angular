@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { UseService } from '../../../../service/use.service';
 import { CommonModule } from '@angular/common';
-import { Product } from '../../../../service/product.model';
+import { Product } from '../../../types/product.model';
 
 @Component({
   selector: 'app-modal-cart',

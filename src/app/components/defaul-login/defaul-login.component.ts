@@ -1,12 +1,10 @@
+import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthGuard } from '../../../service/auth.guard';
-import { Component, Input, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-defaul-login',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './defaul-login.component.html',
   styleUrl: './defaul-login.component.scss'
 })
@@ -15,19 +13,16 @@ export class DefaulLoginComponent {
   @Input() title = '';
   @Input() primaryBtnText = '';
   @Input() secundaryBtnText = '';
-
-  loading: boolean = false;
-
+  @Output("submit") onLogin = new EventEmitter();
+  @Output("navigate") onRegister = new EventEmitter();
 
   private router = inject(Router);
-  private useAuthGuard = inject(AuthGuard);
 
-  login(): void {
-    this.loading = true;
-    setTimeout(() => {
-      this.useAuthGuard.isUsuarioLogado();
-      this.router.navigate(['/home']);
-      this.loading = false;
-    }, 1000);
+  submit() {
+    this.onLogin.emit();
   }
+  navigate() {
+    this.router.navigate(["/signup"]);
+  }
+
 }

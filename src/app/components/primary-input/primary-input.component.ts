@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 
-type InputType = "text" | "password" | "email"
+type InputTypes = "text" | "password" | "email"
 
 
 @Component({
@@ -10,7 +10,7 @@ type InputType = "text" | "password" | "email"
   imports: [ReactiveFormsModule],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
-    useExisting: PrimaryInputComponent,
+    useExisting: forwardRef(() => PrimaryInputComponent),
     multi: true
   }],
   templateUrl: './primary-input.component.html',
@@ -19,7 +19,7 @@ type InputType = "text" | "password" | "email"
 
 export class PrimaryInputComponent implements ControlValueAccessor{
 
-  @Input() type: InputType = "text";
+  @Input() type: InputTypes = "text";
   @Input() placeholder: string = "";
   @Input() label: string = "";
   @Input() inputName: string = "";
@@ -29,7 +29,7 @@ export class PrimaryInputComponent implements ControlValueAccessor{
   onTouched: any = () => { };
   onInput( event: Event ) {
     const value = (event.target as HTMLInputElement).value
-    this.onChange = value;
+    this.onChange(value);
   }
   writeValue(value: any): void {
       this.value = value;

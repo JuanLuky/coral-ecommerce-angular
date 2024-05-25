@@ -5,7 +5,7 @@
     <ng-content></ng-content>
 
     <div class="btn-wrapper">
-      <button class="btn-login" (click)="login()">{{ primaryBtnText }}</button>
+      <button class="btn-login" (click)="submit()">{{ primaryBtnText }}</button>
 
       <div class="divider">
         <div></div>
@@ -13,7 +13,7 @@
         <div></div>
       </div>
 
-      <button class="btn-signup">{{ secundaryBtnText }}</button>
+      <button class="btn-signup" (click)="navigate()">{{ secundaryBtnText }}</button>
     </div>
   </section>
 
@@ -22,6 +22,4 @@
   </section>
 </main>
 
-<div *ngIf="loading" class="spinner-container">
-  <div class="spinner"></div>
-</div>
+

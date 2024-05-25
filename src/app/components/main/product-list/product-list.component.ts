@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { UseService } from '../../../../service/use.service';
 import { MatIconModule } from '@angular/material/icon';
 import { AsyncPipe, CommonModule } from '@angular/common';
-import { Product } from '../../../../service/product.model';
+import { Product } from '../../../types/product.model';
 
 @Component({
   selector: 'product-list',
