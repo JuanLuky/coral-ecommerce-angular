@@ -51,13 +51,13 @@ export class LoginComponent {
           this.loading = true;
           setTimeout(() => {
             this.router.navigate(['/home']);
-          }, 1000);
+            this.loading = false;
+          }, 2000);
         },
         error: (error) => {
           this.toastService.error('Error inesperado! Tente novamente');
         },
         complete: () => {
-          this.loading = false;
         }
       });
   }

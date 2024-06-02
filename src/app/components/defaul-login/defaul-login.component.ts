@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-defaul-login',
@@ -17,13 +16,10 @@ export class DefaulLoginComponent {
   @Output("submit") onLogin = new EventEmitter();
   @Output("navigate") onRegister = new EventEmitter();
 
-
-  private router = inject(Router);
-
   submit() {
     this.onLogin.emit();
   }
   navigate() {
-    this.router.navigate(['/signup']);
+    this.onRegister.emit();
   }
 }

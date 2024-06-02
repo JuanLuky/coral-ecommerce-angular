@@ -56,20 +56,14 @@ export class SignupComponent {
     });
   }
   submitLogin() {
-      this.loginService.login(this.signupForm.value.email, this.signupForm.value.password).subscribe({
+      this.loginService.signup(this.signupForm.value.name, this.signupForm.value.email, this.signupForm.value.password).subscribe({
         next: () => {
-          this.toastService.success('Login feito com sucesso!');
-          this.loading = true;
-          setTimeout(() => {
-            this.router.navigate(['/home']);
-          }, 1000);
+          this.toastService.success('Registrado com sucesso!');
         },
         error: (error) => {
           this.toastService.error('Error inesperado! Tente novamente');
         },
-        complete: () => {
-          this.loading = false;
-        }
+        complete: () => {}
       });
   }
 
